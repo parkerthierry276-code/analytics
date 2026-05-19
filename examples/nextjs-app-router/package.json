@@ -20,7 +20,7 @@
   "devDependencies": {
     "autoprefixer": "^10",
     "postcss": "^8",
-    "serve": "^14.2.4",
+    "serve": "^14.2.6",
     "tailwindcss": "^3"
   }
 }
