@@ -12,7 +12,7 @@ This analytics plugin will add the FullStory javascript library to your app & se
 
 For more information on FullStory's official browser package, you can check out [the official FullStory Browser SDK on NPM](https://www.npmjs.com/package/@fullstory/browser).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -26,7 +26,7 @@ For more information on FullStory's official browser package, you can check out 
 - [Formatting payloads](#formatting-payloads)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -41,7 +41,7 @@ You will need your `org` ID from [FullStory setting](https://help.fullstory.com/
 
 To find your FullStory account's `org` ID go to **Settings > FullStory Setup.** and grab the `_fs_org` value.
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -135,7 +135,7 @@ Below are additional implementation examples.
         var Analytics = _analytics.init({
           app: 'my-app-name',
           plugins: [
-            analyticsFullStory({
+            analyticsFullStory.default({
               org: 'your-org-name'
             })
           ]
@@ -215,7 +215,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Formatting payloads
 

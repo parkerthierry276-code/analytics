@@ -8,28 +8,29 @@ Integration with [segment](https://segment.com/) for [analytics](https://www.npm
 
 For more information [see the docs](https://getanalytics.io/plugins/segment/).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Server-side usage](#server-side-usage)
-  - [Server-side API](#server-side-api)
-  - [Configuration options for server-side](#configuration-options-for-server-side)
-- [Additional examples](#additional-examples)
-- [Customing the page name field](#customing-the-page-name-field)
-- [Loading script from custom proxy](#loading-script-from-custom-proxy)
-- [Making group calls](#making-group-calls)
-  - [Browser Example](#browser-example)
-  - [Server side Example](#server-side-example)
+- [Segment plugin for `analytics`](#segment-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Server-side usage](#server-side-usage)
+    - [Server-side API](#server-side-api)
+    - [Configuration options for server-side](#configuration-options-for-server-side)
+  - [Additional examples](#additional-examples)
+  - [Customing the page name field](#customing-the-page-name-field)
+  - [Loading script from custom proxy](#loading-script-from-custom-proxy)
+  - [Making group calls](#making-group-calls)
+    - [Browser Example](#browser-example)
+    - [Server side Example](#server-side-example)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -38,7 +39,7 @@ npm install analytics
 npm install @analytics/segment
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -341,7 +342,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Customing the page name field
 

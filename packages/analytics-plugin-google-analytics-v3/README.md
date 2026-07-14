@@ -18,33 +18,34 @@ For more information [see the docs](https://getanalytics.io/plugins/google-analy
 
 For the newer version of google analytics please see the [`@analytics/google-analytics` package](https://www.npmjs.com/package/@analytics/google-analytics) or the [GA4 plugin docs](https://getanalytics.io/plugins/google-analytics/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Upgrading to google analytics v4](#upgrading-to-google-analytics-v4)
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Server-side usage](#server-side-usage)
-  - [Server-side API](#server-side-api)
-  - [Configuration options for server-side](#configuration-options-for-server-side)
-- [Additional examples](#additional-examples)
-- [Anonymize Visitor IPs](#anonymize-visitor-ips)
-- [Customizing event payloads](#customizing-event-payloads)
-- [Using GA Custom Dimensions](#using-ga-custom-dimensions)
-  - [Set the "customDimensions" option](#set-the-customdimensions-option)
-- [Using multiple instances](#using-multiple-instances)
-- [Custom Proxy Endpoint](#custom-proxy-endpoint)
-- [Electron Apps & Browser Extensions](#electron-apps--browser-extensions)
-- [Custom GA Tasks](#custom-ga-tasks)
-- [Cookie Config](#cookie-config)
+- [Google Analytics v3 (Universal analytics)](#google-analytics-v3-universal-analytics)
+  - [Upgrading to google analytics v4](#upgrading-to-google-analytics-v4)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Server-side usage](#server-side-usage)
+    - [Server-side API](#server-side-api)
+    - [Configuration options for server-side](#configuration-options-for-server-side)
+  - [Additional examples](#additional-examples)
+  - [Anonymize Visitor IPs](#anonymize-visitor-ips)
+  - [Customizing event payloads](#customizing-event-payloads)
+  - [Using GA Custom Dimensions](#using-ga-custom-dimensions)
+    - [Set the "customDimensions" option](#set-the-customdimensions-option)
+  - [Using multiple instances](#using-multiple-instances)
+  - [Custom Proxy Endpoint](#custom-proxy-endpoint)
+  - [Electron Apps & Browser Extensions](#electron-apps--browser-extensions)
+  - [Custom GA Tasks](#custom-ga-tasks)
+  - [Cookie Config](#cookie-config)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -53,7 +54,7 @@ npm install analytics
 npm install @analytics/google-analytics-v3
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -127,19 +128,19 @@ const analytics = Analytics({
 
 ### Configuration options for browser
 
-| Option                                                | description |
-|:------------------------------------------------------|:-----------|
-| `trackingId` <br/>**required** - string               | Google Analytics site tracking Id |
-| `debug` <br/>_optional_ - boolean                     | Enable Google Analytics debug mode |
-| `anonymizeIp` <br/>_optional_ - boolean               | Enable [Anonymizing IP addresses](https://bit.ly/3c660Rd) sent to Google Analytics. [See details below](#anonymize-visitor-ips) |
-| `customDimensions` <br/>_optional_ - object           | Map [Custom dimensions](https://bit.ly/3c5de88) to send extra information to Google Analytics. [See details below](#using-ga-custom-dimensions) |
+| Option | description |
+|:---------------------------|:-----------|
+| `trackingId` <br/>**required** - string| Google Analytics site tracking Id |
+| `debug` <br/>_optional_ - boolean| Enable Google Analytics debug mode |
+| `anonymizeIp` <br/>_optional_ - boolean| Enable [Anonymizing IP addresses](https://bit.ly/3c660Rd) sent to Google Analytics. [See details below](#anonymize-visitor-ips) |
+| `customDimensions` <br/>_optional_ - object| Map [Custom dimensions](https://bit.ly/3c5de88) to send extra information to Google Analytics. [See details below](#using-ga-custom-dimensions) |
 | `resetCustomDimensionsOnPage` <br/>_optional_ - object| Reset custom dimensions by key on analytics.page() calls. Useful for single page apps. |
-| `setCustomDimensionsToPage` <br/>_optional_ - boolean | Mapped dimensions will be set to the page & sent as properties of all subsequent events on that page. If false, analytics will only pass custom dimensions as part of individual events |
-| `instanceName` <br/>_optional_ - string               | Custom tracker name for google analytics. Use this if you need multiple googleAnalytics scripts loaded |
-| `customScriptSrc` <br/>_optional_ - string            | Custom URL for google analytics script, if proxying calls |
-| `cookieConfig` <br/>_optional_ - object               | Additional cookie properties for configuring the [ga cookie](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#configuring_cookie_field_settings) |
-| `tasks` <br/>_optional_ - object                      | [Set custom google analytic tasks](https://developers.google.com/analytics/devguides/collection/analyticsjs/tasks) |
-| `nonce` <br/>_optional_ - string                      | Content-Security-Policy nonce value                            |
+| `setCustomDimensionsToPage` <br/>_optional_ - boolean| Mapped dimensions will be set to the page & sent as properties of all subsequent events on that page. If false, analytics will only pass custom dimensions as part of individual events |
+| `instanceName` <br/>_optional_ - string| Custom tracker name for google analytics. Use this if you need multiple googleAnalytics scripts loaded |
+| `customScriptSrc` <br/>_optional_ - string| Custom URL for google analytics script, if proxying calls |
+| `cookieConfig` <br/>_optional_ - object| Additional cookie properties for configuring the [ga cookie](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#configuring_cookie_field_settings) |
+| `tasks` <br/>_optional_ - object| [Set custom google analytic tasks](https://developers.google.com/analytics/devguides/collection/analyticsjs/tasks) |
+| `nonce` <br/>_optional_ - string| Content-Security-Policy nonce value |
 
 ## Server-side usage
 
@@ -356,7 +357,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 
 ## Anonymize Visitor IPs

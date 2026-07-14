@@ -10,20 +10,21 @@ The simple analytics plugin automatically tracks page views on route changes for
 
 For more information [see the docs](https://getanalytics.io/plugins/simple-analytics/).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Additional examples](#additional-examples)
+- [Simple Analytics Plugin](#simple-analytics-plugin)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -32,7 +33,7 @@ npm install analytics
 npm install @analytics/simple-analytics
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -183,4 +184,4 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->

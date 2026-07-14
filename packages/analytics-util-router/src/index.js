@@ -1,5 +1,5 @@
 
-/* Listener for pushstate route changes */
+/* Listener for push state route changes */
 export default function onRouteChange(fn) {
   if (typeof window === 'undefined') return
   const { addEventListener, history, location } = window
@@ -27,7 +27,7 @@ function remove(str, char) {
   return (has > -1) ? str.slice(0, has) : str
 }
 
-// Trim hash and params off parcial url path
+// Trim hash and params off partial url path
 function trimPath(urlPath) {
   ['#', '?'].forEach((x) => urlPath = remove(urlPath, x))
   return urlPath

@@ -4,11 +4,11 @@ pageTitle: SessionStorage Utils
 description: Utility library for managing HTML SessionStorage
 ---
 
-A tiny sessionStorage utility library with fallbacks in <!-- AUTO-GENERATED-CONTENT:START (pkgSize) -->`239 bytes`<!-- AUTO-GENERATED-CONTENT:END -->.
+A tiny sessionStorage utility library with fallbacks in <!-- docs (pkgSize) -->`234 bytes`<!-- /docs -->.
 
 This module will automatically fail back to global window storage if `sessionStorage` is not available.
 
-Exposes `hasSessionStorage`, `getItem`, `setItem`, & `removeItem` functions.
+Exposes `hasSessionStorage`, `getSessionItem`, `setSessionItem`, & `removeSessionItem` functions.
 
 [See live demo](https://utils-session-storage.netlify.app/).
 
@@ -24,7 +24,7 @@ npm install @analytics/session-storage-utils
 
 Below is the api for `@analytics/session-storage-utils`. These utilities are tree-shakable.
 
-## `hasSessionStorage`
+### `hasSessionStorage`
 
 Check if sessionStorage is supported
 
@@ -36,17 +36,17 @@ if (hasSessionStorage()) {
 }
 ```
 
-## `getSessionItem`
+### `getSessionItem`
 
 Get a sessionStorage value.
 
 ```js
 import { getSessionItem } from '@analytics/session-storage-utils'
 
-const value = getItem('item-key')
+const value = getSessionItem('item-key')
 ```
 
-## `setSessionItem`
+### `setSessionItem`
 
 Set a sessionStorage value.
 
@@ -56,7 +56,7 @@ import { setSessionItem } from '@analytics/session-storage-utils'
 setSessionItem('item-key', 'a')
 ```
 
-## `removeSessionItem`
+### `removeSessionItem`
 
 Delete a sessionStorage value.
 

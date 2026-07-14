@@ -9,7 +9,7 @@ Crazy Egg adds heat mapping, A/B testing, and session recording functionality to
 
 This analytics plugin will load Crazy Egg into your application.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -23,7 +23,7 @@ This analytics plugin will load Crazy Egg into your application.
 - [Usage](#usage)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -34,7 +34,7 @@ npm install analytics
 npm install @analytics/crazy-egg
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -171,7 +171,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 ## Usage
 
 Include `analytics` and `@analytics/crazy-egg` in the source code of your project.

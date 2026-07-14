@@ -4,9 +4,9 @@ pageTitle: Event Listener Utils
 description: Utility library for adding backwards compatible event listeners
 ---
 
-A tiny utility library for working with event listeners in <!-- AUTO-GENERATED-CONTENT:START (pkgSize) -->`726 bytes`<!-- AUTO-GENERATED-CONTENT:END -->.
+A tiny utility library for working with event listeners in <!-- docs (pkgSize) -->`734 bytes`<!-- /docs -->.
 
-Exposes `addListener`, `removeListener` functions.
+Exposes `addListener`, `removeListener`, `once`, `addWindowEvent`, `onError`, and `onLoad` functions.
 
 This library will work with [analytics](https://getanalytics.io) or as a standalone package.
 
@@ -30,7 +30,7 @@ npm install @analytics/listener-utils
 
 Below is the api for `@analytics/listener-utils`.
 
-## `addListener`
+### `addListener`
 
 Add an event listener to an element. 
 
@@ -121,7 +121,7 @@ addListener('#my-button', 'click mouseover', () => {
 })
 ```
 
-## `removeListener`
+### `removeListener`
 
 Removes an event listener from an element.
 
@@ -145,7 +145,7 @@ reAttachListener()
 
 See [removeEventListener docs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) for options 
 
-## `once`
+### `once`
 
 Utility function to fire function exactly once.
 
@@ -164,6 +164,42 @@ onceOnlyFunc()
 // nothing fired
 ```
 
-### Alternative libs
+### `addWindowEvent`
+
+Attach a handler to a `window` event property, wrapping any existing handler so both fire.
+
+```js
+import { addWindowEvent } from '@analytics/listener-utils'
+
+addWindowEvent('onresize', () => {
+  console.log('window resized')
+})
+```
+
+### `onError`
+
+Attach a handler to the `window.onerror` event, preserving any handler already set.
+
+```js
+import { onError } from '@analytics/listener-utils'
+
+onError((message, source, lineno, colno, error) => {
+  console.log('window error', message)
+})
+```
+
+### `onLoad`
+
+Attach a handler to the `window.onload` event, preserving any handler already set.
+
+```js
+import { onLoad } from '@analytics/listener-utils'
+
+onLoad(() => {
+  console.log('window loaded')
+})
+```
+
+## Alternative libraries
 
 - https://github.com/azu/ui-event-observer

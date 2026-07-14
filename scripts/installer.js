@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-const globby = require('markdown-magic').globby
 const cp = require("child_process")
 
 function installDeps(functionDir, cb) {
@@ -11,9 +10,11 @@ function installDeps(functionDir, cb) {
   console.log('Installing example deps. This can take some time')
   console.log('Alternatively, you can cd into your example of choice and run "npm install"')
   console.log()
-  const findJSFiles = ['*/package.json', '!node_modules', '!**/node_modules']
   const directory = path.join(__dirname, '..', 'examples')
-	const foldersWithDeps = await globby(findJSFiles, { cwd: directory })
+	const foldersWithDeps = fs.readdirSync(directory, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && entry.name !== 'node_modules')
+    .filter((entry) => fs.existsSync(path.join(directory, entry.name, 'package.json')))
+    .map((entry) => `${entry.name}/package.json`)
 
   const folders = foldersWithDeps.map(fnFolder => {
     return fnFolder.substring(0, fnFolder.indexOf("package.json"))

@@ -4,7 +4,11 @@ pageTitle: Storage Utils
 description: Utility library for persisting data
 ---
 
-A tiny storage utility library with fallback mechanism in <!-- AUTO-GENERATED-CONTENT:START (pkgSize) -->`1017 bytes`<!-- AUTO-GENERATED-CONTENT:END -->.
+A tiny storage utility library with fallback mechanism in <!-- docs (pkgSize) -->`1020 bytes`<!-- /docs -->.
+
+Exposes `getItem`, `setItem`, `removeItem` functions.
+
+This library will work with [analytics](https://getanalytics.io) or as a standalone import in your code.
 
 By default, `@analytics/storage-utils` will persist values in browser in this order:
 
@@ -17,7 +21,19 @@ If you want to specify which storage mechanism to use, use the `options` paramet
 
 [See live demo](https://utils-storage.netlify.app).
 
-## `setItem`
+## How to install
+
+Install `@analytics/storage-utils` from [npm](https://www.npmjs.com/package/@analytics/storage-utils).
+
+```bash
+npm install @analytics/storage-utils
+```
+
+## API
+
+Below is the api for `@analytics/storage-utils`. You can import only what you need & the rest will be tree-shaken out of your bundle.
+
+### `setItem`
 
 Set a value.
 
@@ -51,7 +67,7 @@ setItem('keyThree', 'xyz', { storage: 'global' })
 // { value: "cookieVal", oldValue: "null", location: "cookie" }
 ```
 
-## `getItem`
+### `getItem`
 
 Get a value.
 
@@ -84,7 +100,7 @@ const valueObj = getItem('otherKey', { storage: '*' })
 // { cookie: undefined, localStorage: "hahaha", global: null }
 ```
 
-## `removeItem`
+### `removeItem`
 
 Remote a value.
 

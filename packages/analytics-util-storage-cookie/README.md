@@ -6,7 +6,7 @@ description: Utility library for managing HTML cookies
 
 # Cookie Utilities
 
-A tiny cookie utility library with fallbacks in <!-- AUTO-GENERATED-CONTENT:START (pkgSize) -->`472 bytes`<!-- AUTO-GENERATED-CONTENT:END -->.
+A tiny cookie utility library with fallbacks in <!-- docs (pkgSize) -->`476 bytes`<!-- /docs -->.
 
 This module will automatically fail back to global window storage if `cookies` are not available.
 
@@ -26,7 +26,7 @@ npm install @analytics/cookie-utils
 
 Below is the api for `@analytics/cookie-utils`. These utilities are tree-shakable.
 
-## `hasCookies`
+### `hasCookies`
 
 Check if cookies are supported. Will verify browser will accept cookies
 
@@ -39,7 +39,7 @@ if (hasCookies()) {
 ```
 
 
-## `getCookie`
+### `getCookie`
 
 Get a cookie value.
 
@@ -49,7 +49,7 @@ import { getCookie } from '@analytics/cookie-utils'
 const value = getCookie('cookie-key')
 ```
 
-## `setCookie`
+### `setCookie`
 
 Set a cookie value.
 
@@ -63,7 +63,7 @@ setCookie('test', 'a')
 setCookie('test', 'a', 60*60*24, '/api', '*.example.com', true)
 ```
 
-## `removeCookie`
+### `removeCookie`
 
 Remove a cookie.
 

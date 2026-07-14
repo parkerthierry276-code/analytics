@@ -8,7 +8,7 @@ This library exports the `amplitude` plugin for the [`analytics`](https://www.np
 
 This analytics plugin will load Amplitude integration into your application.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -22,7 +22,7 @@ This analytics plugin will load Amplitude integration into your application.
 - [Setting Custom Session Ids](#setting-custom-session-ids)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -31,7 +31,7 @@ npm install analytics
 npm install @analytics/amplitude
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -241,7 +241,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Setting Custom Session Ids
 

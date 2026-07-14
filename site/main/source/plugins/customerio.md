@@ -5,7 +5,7 @@ description: Using the customer.io plugin
 
 Integration with [customer.io](https://customer.io/) for [analytics](https://www.npmjs.com/package/analytics) package.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -21,7 +21,7 @@ Integration with [customer.io](https://customer.io/) for [analytics](https://www
 - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -32,7 +32,7 @@ npm install analytics
 npm install @analytics/customerio
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -327,6 +327,6 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 See the [full list of analytics provider plugins](https://github.com/DavidWells/analytics#current-plugins) in the main repo.

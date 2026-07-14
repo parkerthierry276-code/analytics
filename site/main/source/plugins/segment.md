@@ -5,7 +5,7 @@ description: Using the segment plugin
 
 Integration with [segment](https://segment.com/) for [analytics](https://www.npmjs.com/package/analytics)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -26,7 +26,7 @@ Integration with [segment](https://segment.com/) for [analytics](https://www.npm
   - [Server side Example](#server-side-example)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -35,7 +35,7 @@ npm install analytics
 npm install @analytics/segment
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -336,7 +336,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Customing the page name field
 

@@ -222,23 +222,24 @@ function getString(url, prefix) {
 }
 
 /**
- * Strip a query parameter from a url string
- * @param  {string} url   - url with query parameters
- * @param  {string} param - parameter to strip
- * @return {string} cleaned url
+ * Strip a query parameter from a search string
+ * @param  {string} prefix       - leading separator char (`?` or `#`)
+ * @param  {string} search       - search string with query parameters
+ * @param  {string|RegExp} param - parameter name or pattern to strip
+ * @return {string} cleaned search string
  */
 export function paramsClean(prefix, search, param) {
   const isPattern = isRegex(param)
   if (!isPattern && search.indexOf(param) === -1) {
-    return url
+    return search
   }
-  // remove all matching params from URL
+  // remove all matching params from search
   const match = (isPattern) ? param.source : `\\b${param}\\b`
   const regex = new RegExp(`(\\&|\\${prefix})(${match})(=?[_A-Za-z0-9"+=.\\/\\-@%]+)?`, 'g')
   // console.log('regex', regex)
   const cleanSearch = search.replace(regex, '').replace(/^&/, prefix)
   // replace search params with clean params
-  return url.replace(search, cleanSearch)
+  return cleanSearch
 }
 
 /**

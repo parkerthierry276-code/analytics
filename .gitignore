@@ -26,3 +26,5 @@ misc.js
 
 ### VisualStudioCode ###
 .vscode/*
+# Generated install-test workspace
+scripts/build/tests-dist/

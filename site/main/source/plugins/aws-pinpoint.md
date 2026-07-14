@@ -7,9 +7,9 @@ Integration with [AWS Pinpoint](https://aws.amazon.com/pinpoint/) for [analytics
 
 Amazon Pinpoint is a flexible and scalable outbound and inbound marketing communications service. You can connect with customers over channels like email, SMS, push, or voice.
 
-This package weighs in at <!-- AUTO-GENERATED-CONTENT:START (pkgSize:src=./dist/@analytics/aws-pinpoint.min.js) -->`12.91kb`<!-- AUTO-GENERATED-CONTENT:END --> gzipped.
+This package weighs in at <!-- docs (pkgSize) src='./dist/@analytics/aws-pinpoint.min.js' -->`14.65kb`<!-- /docs --> gzipped.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -26,7 +26,7 @@ This package weighs in at <!-- AUTO-GENERATED-CONTENT:START (pkgSize:src=./dist/
 - [Authenticating](#authenticating)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -37,7 +37,7 @@ npm install analytics
 npm install @analytics/aws-pinpoint
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -340,7 +340,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Authenticating 
 

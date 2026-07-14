@@ -10,23 +10,24 @@ This analytics plugin will load Custify's client side tracking script into your 
 
 [View the docs](https://getanalytics.io/plugins/custify/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Server-side usage](#server-side-usage)
-  - [Server-side API](#server-side-api)
-  - [Configuration options for server-side](#configuration-options-for-server-side)
-- [Additional examples](#additional-examples)
+- [Custify plugin for `analytics`](#custify-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Server-side usage](#server-side-usage)
+    - [Server-side API](#server-side-api)
+    - [Configuration options for server-side](#configuration-options-for-server-side)
+  - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END (TOC) -->
+<!-- /docs -->
 
 ## Installation
 
@@ -37,7 +38,7 @@ npm install analytics
 npm install @analytics/custify
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -333,4 +334,4 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->

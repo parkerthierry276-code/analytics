@@ -8,6 +8,8 @@ description: Utility library for redacting object keys/values
 
 A [tiny](https://bundlephobia.com/result?p=@analytics/redact-utils) utilities library for redacting object keys/values.
 
+Exposes `redactObject`, `restoreObject`, `cleanObject`, `encode`, `decode`, `safeEncode`, and `safeDecode` functions.
+
 Redaction works by checking for any object keys prefixed with `$` and then redacts those values.
 
 Note: The redaction is using `base64` encoding and is not meant to store secure values.
@@ -24,7 +26,7 @@ npm install @analytics/redact-utils
 
 Below is the api for `@analytics/redact-utils`.
 
-## `redactObject`
+### `redactObject`
 
 Redact all object values where the keys are prefixed with `$`
 
@@ -58,9 +60,11 @@ console.log(encoded)
 */
 ```
 
-## `restoreObject`
+### `restoreObject`
 
-Restore object after redaction
+Restore object after redaction.
+
+Pass `true` as the second argument to also strip the `$` prefix from restored keys.
 
 ```js
 import { restoreObject } from '@analytics/redact-utils' 
@@ -102,4 +106,73 @@ console.log(decodedClean)
   encode: { visible: 'value', nice: { lol: 'this will be encoded' } }
 }
 */
+```
+
+### `cleanObject`
+
+Remove the `$` prefix from any redacted keys without decoding their values. Recurses through nested objects and arrays.
+
+```js
+import { cleanObject } from '@analytics/redact-utils'
+
+const obj = {
+  hi: 'awesome',
+  $email: 'foo@bar.com',
+  nested: {
+    $secret: 'value'
+  }
+}
+const cleaned = cleanObject(obj)
+console.log(cleaned)
+/*
+{
+  hi: 'awesome',
+  email: 'foo@bar.com',
+  nested: { secret: 'value' }
+}
+*/
+```
+
+### `encode`
+
+Base64 encode a string. Uses `window.btoa` in the browser and `Buffer` in node.
+
+```js
+import { encode } from '@analytics/redact-utils'
+
+const encoded = encode('foo@bar.com')
+console.log(encoded) // Zm9vQGJhci5jb20=
+```
+
+### `decode`
+
+Base64 decode a string. Uses `window.atob` in the browser and `Buffer` in node.
+
+```js
+import { decode } from '@analytics/redact-utils'
+
+const decoded = decode('Zm9vQGJhci5jb20=')
+console.log(decoded) // foo@bar.com
+```
+
+### `safeEncode`
+
+Like `encode`, but returns the original string instead of throwing if encoding fails.
+
+```js
+import { safeEncode } from '@analytics/redact-utils'
+
+const encoded = safeEncode('foo@bar.com')
+console.log(encoded) // Zm9vQGJhci5jb20=
+```
+
+### `safeDecode`
+
+Like `decode`, but returns the original string instead of throwing if decoding fails.
+
+```js
+import { safeDecode } from '@analytics/redact-utils'
+
+const decoded = safeDecode('Zm9vQGJhci5jb20=')
+console.log(decoded) // foo@bar.com
 ```

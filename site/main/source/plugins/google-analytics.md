@@ -6,7 +6,7 @@ pageTitle: Google Analytics
 
 This analytics plugin will load google analytics v.4 into your application.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -22,7 +22,7 @@ This analytics plugin will load google analytics v.4 into your application.
 - [Using GA3 and GA4 together](#using-ga3-and-ga4-together)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -31,7 +31,7 @@ npm install analytics
 npm install @analytics/google-analytics
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -117,6 +117,7 @@ const analytics = Analytics({
 | `gtagConfig.cookie_update` <br/>_optional_ - object| Additional cookie properties for configuring the [ga cookie](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#configuring_cookie_field_settings) |
 | `gtagConfig.cookie_flags` <br/>_optional_ - object| Additional cookie properties for configuring the [ga cookie](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#configuring_cookie_field_settings) |
 | `customScriptSrc` <br/>_optional_ - string| Custom URL for google analytics script, if proxying calls |
+| `nonce` <br/>_optional_ - string| Content-Security-Policy nonce value |
 
 ## Additional examples
 
@@ -225,7 +226,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Fix "double page views"
 

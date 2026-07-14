@@ -1,10 +1,30 @@
+<!--
+title: Javascript URL param utility library
+pageTitle: Param Utils
+description: Utility library for parsing, removing & replacing URL params
+-->
+
 # Param utilities
 
-URI param utilities for [analytics](https://www.npmjs.com/package/analytics)
+URI param utilities for [analytics](https://www.npmjs.com/package/analytics) in <!-- docs (pkgSize) -->`1.68kb`<!-- /docs -->.
+
+Exposes `getParams`, `removeParams`, `replaceParams` functions.
+
+This library will work with [analytics](https://getanalytics.io) or as a standalone import in your code.
+
+## How to install
+
+Install `@analytics/param-utils` from [npm](https://www.npmjs.com/package/@analytics/param-utils).
+
+```bash
+npm install @analytics/param-utils
+```
+
+## API
 
 `getParams`, `removeParams`, `replaceParams`
 
-## `getParams`
+### `getParams`
 
 ```js
 import { getParams } from '@analytics/param-utils'
@@ -13,7 +33,7 @@ import { getParams } from '@analytics/param-utils'
 const params = getParams()
 ```
 
-## `removeParams`
+### `removeParams`
 
 ```js
 import { removeParams } from '@analytics/param-utils'
@@ -22,7 +42,7 @@ import { removeParams } from '@analytics/param-utils'
 removeParams('foo')
 ```
 
-## `replaceParams`
+### `replaceParams`
 
 ```js
 import { replaceParams } from '@analytics/param-utils'
@@ -30,7 +50,6 @@ import { replaceParams } from '@analytics/param-utils'
 // Replace
 replaceParams('foo')
 ```
-
 
 ## Params Parse benchmark
 
@@ -44,16 +63,15 @@ native                 x 179,175 ops/sec ±0.88% (88 runs sampled)
 qss                    x 391,393 ops/sec ±0.99% (91 runs sampled)
 ```
 
-## Details
+## References
 
-[Open API Query Params](https://github.com/OAI/OpenAPI-Specification/issues/1706)
-[Query API ref](https://docs.directus.io/api/reference.html#filtering)
-[jQuery Param](https://api.jquery.com/jquery.param/)
-[URL spec](https://url.spec.whatwg.org/#url-query-string)
-[REST-API-Design-Best-Practices-for-Parameters-and-Query-String-Usage](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Best-Practices-for-Parameters-and-Query-String-Usage/#)
+- [Open API Query Params](https://github.com/OAI/OpenAPI-Specification/issues/1706)
+- [Query API ref](https://docs.directus.io/api/reference.html#filtering)
+- [jQuery Param](https://api.jquery.com/jquery.param/)
+- [URL spec](https://url.spec.whatwg.org/#url-query-string)
+- [REST-API-Design-Best-Practices-for-Parameters-and-Query-String-Usage](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Best-Practices-for-Parameters-and-Query-String-Usage/#)
 
-
-## Alt libraries
+## Alternative libraries
 
 - https://github.com/Sage/jsurl
 - https://github.com/QubitProducts/urlite

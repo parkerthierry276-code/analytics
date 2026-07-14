@@ -5,7 +5,7 @@ description: Using the ownstats plugin
 
 Integration with [Ownstats](https://ownstats.cloud/) for [analytics](https://www.npmjs.com/package/analytics)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -21,7 +21,7 @@ Integration with [Ownstats](https://ownstats.cloud/) for [analytics](https://www
 - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -30,7 +30,7 @@ npm install analytics
 npm install @analytics/ownstats
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -264,6 +264,6 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 See the [full list of analytics provider plugins](https://getanalytics.io/plugins/) in the main repo.

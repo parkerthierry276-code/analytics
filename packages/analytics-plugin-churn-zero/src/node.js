@@ -12,7 +12,7 @@ import fetch from 'unfetch'
  * @example
  *
  * churnZeroPlugin({
- *   appKey: '1234578'
+ *   appKey: '1234578',
  *   subdomain: 'mycompanydomain'
  * })
  */

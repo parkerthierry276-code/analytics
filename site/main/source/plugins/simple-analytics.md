@@ -7,7 +7,7 @@ Integration with simple analytics [Simple Analytics](https://simpleanalytics.com
 
 The simple analytics plugin automatically tracks page views on route changes for single page applications.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -20,7 +20,7 @@ The simple analytics plugin automatically tracks page views on route changes for
 - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -29,7 +29,7 @@ npm install analytics
 npm install @analytics/simple-analytics
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -178,4 +178,4 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->

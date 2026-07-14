@@ -1,6 +1,5 @@
 const path = require('path')
-const { promises, constants } = require('fs')
-const globby = require('markdown-magic').globby
+const { promises, constants, readdirSync, existsSync } = require('fs')
 const fs = promises
 
 const PACKAGE_PATH = path.join(__dirname, '../packages')
@@ -37,8 +36,10 @@ const CUSTOM_MAPPING = {
 const fileExists = (s) => fs.access(s, constants.F_OK).then(() => true).catch(() => false)
 
 async function getFiles() {
-  const topLevelPackages = [`${PACKAGE_PATH}/*/package.json`]
-  const files = await globby(topLevelPackages)
+  const files = readdirSync(PACKAGE_PATH, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(PACKAGE_PATH, entry.name, 'package.json'))
+    .filter((pkgPath) => existsSync(pkgPath))
   const collectInfo = files.map(async (file) => {
     const pkg = require(file)
     const slug = pkg.name.replace(/^@analytics\//, '')
@@ -85,7 +86,13 @@ function formatContent(content) {
   const removeContentRegex = /<!--.*stripFromDocsSTART((.|\n)*?END.*-->)/g
   const mdMagicRegex = /<!--.*AUTO-GENERATED-CONTENT:START((.|\n)*?END.*-->)/g
 
-  return content
+  // Capture the first h1 so we can also drop its self-link from the TOC.
+  // The site strips the h1 (theme renders the title from frontmatter), which
+  // would otherwise leave a broken "#<title>" anchor link in the TOC.
+  const h1Match = content.match(/^#\s+(.+)$/m)
+  const h1Anchor = h1Match ? githubSlug(h1Match[1]) : null
+
+  const out = content
     // Remove first h1
     .replace(/^#(.*)/m, '')
     // remove blocks
@@ -99,6 +106,30 @@ function formatContent(content) {
     .replace('-->', '---')
     // Replace multiple blank lines
     .replace(/^\s*\n/gm, '\n')
+
+  return h1Anchor ? dropTocTitleEntry(out, h1Anchor) : out
+}
+
+// GitHub-style heading anchor slug
+function githubSlug(text) {
+  return text.trim().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')
+}
+
+// Remove the TOC entry that links to the stripped h1, de-indenting its children.
+function dropTocTitleEntry(content, anchor) {
+  const titleLine = new RegExp(`^- \\[.*\\]\\(#${anchor}\\)\\s*$`)
+  return content.replace(/(<!-- docs \(TOC\)[\s\S]*?-->\n)([\s\S]*?)(\n<!-- \/docs -->)/, (match, open, inner, close) => {
+    let removed = false
+    const lines = inner.split('\n').reduce((acc, line) => {
+      if (!removed && titleLine.test(line)) {
+        removed = true
+        return acc
+      }
+      acc.push(removed ? line.replace(/^ {2}/, '') : line)
+      return acc
+    }, [])
+    return open + lines.join('\n') + close
+  })
 }
 
 function removeGithubSpecificContent(content) {

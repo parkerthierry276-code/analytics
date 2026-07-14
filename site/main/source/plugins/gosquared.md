@@ -7,7 +7,7 @@ Integration with [GoSquared](https://www.gosquared.com/) for [analytics](https:/
 
 GoSquared provides analytics, live chat, & automation tools to help developers identify areas of improvement in their application flows & to help convert users.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -22,7 +22,7 @@ GoSquared provides analytics, live chat, & automation tools to help developers i
 - [Running on localHost](#running-on-localhost)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -33,7 +33,7 @@ npm install analytics
 npm install @analytics/gosquared
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -225,7 +225,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Finding your GoSquared projectToken
 

@@ -62,7 +62,9 @@ export default function Template(props) {
 
   const {hash, pathname} = props.location
   const {file, site} = props.data
-  const {frontmatter, headings} = file.childMarkdownRemark || file.childMdx
+  const {frontmatter, headings: rawHeadings} = file.childMarkdownRemark || file.childMdx
+  // Show h2 + h3 in the section nav (h3s are the API method headings)
+  const headings = (rawHeadings || []).filter(heading => heading.depth === 2 || heading.depth === 3)
   // console.log('frontmatter', frontmatter)
   const {title, description, subtitle} = site.siteMetadata
   const {
@@ -170,8 +172,9 @@ export const pageQuery = graphql`
           pageTitle
           description
         }
-        headings(depth: h2) {
+        headings {
           value
+          depth
         }
         htmlAst
       }
@@ -182,8 +185,9 @@ export const pageQuery = graphql`
           subTitle
           description
         }
-        headings(depth: h2) {
+        headings {
           value
+          depth
         }
         code {
           body

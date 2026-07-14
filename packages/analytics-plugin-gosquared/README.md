@@ -10,22 +10,23 @@ GoSquared provides analytics, live chat, & automation tools to help developers i
 
 [View the docs](https://getanalytics.io/plugins/gosquared/).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Additional examples](#additional-examples)
-- [Finding your GoSquared projectToken](#finding-your-gosquared-projecttoken)
-- [Running on localHost](#running-on-localhost)
+- [GoSquared Plugin for `analytics`](#gosquared-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Additional examples](#additional-examples)
+  - [Finding your GoSquared projectToken](#finding-your-gosquared-projecttoken)
+  - [Running on localHost](#running-on-localhost)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -36,7 +37,7 @@ npm install analytics
 npm install @analytics/gosquared
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -230,7 +231,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Finding your GoSquared projectToken
 

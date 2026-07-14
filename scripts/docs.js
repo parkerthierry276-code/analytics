@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const { inspect } = require('util')
-const markdownMagic = require('markdown-magic')
+const { markdownMagic } = require('markdown-magic')
 const dox = require('dox')
 const outdent = require('outdent')
 const prettier = require('prettier')
@@ -32,7 +32,7 @@ const cache = {}
 const config = {
   transforms: {
     // https://github.com/moleculerjs/moleculer-addons/blob/master/readme-generator.js#L11
-    PACKAGES(content, options) {
+    PACKAGES({ content, options }) {
       const base = path.resolve('packages')
       const packages = fs.readdirSync(path.resolve('packages'))
         .filter(pkg => !/^\./.test(pkg))
@@ -48,8 +48,8 @@ const config = {
         .join('\n')
       return packages
     },
-    pkgSize: async (content, options, context) => {
-      const dir = path.dirname(context.originalPath)
+    pkgSize: async ({ content, options, srcPath }) => {
+      const dir = path.dirname(path.resolve(srcPath))
       let fileToCheck
       const hasPlural = options.hasOwnProperty('plural') || options.plural === true
 
@@ -75,7 +75,7 @@ const config = {
       // console.log(sizeData)
       return `\`${sizeData.size}\``
     },
-    PLUGINSXX(content, options) {
+    PLUGINSXX({ content, options }) {
       const base = path.resolve('packages')
       const packages = fs.readdirSync(path.resolve('packages'))
         .filter(pkg => !/^\./.test(pkg))
@@ -99,7 +99,7 @@ const config = {
         .join('\n')
       return packages
     },
-    PLUGINS: function(content, options) {
+    PLUGINS: function({ content, options }) {
       const base = path.resolve('packages')
       const packages = fs.readdirSync(path.resolve('packages'))
         .filter(pkg => !/^\./.test(pkg))
@@ -132,7 +132,7 @@ const config = {
       });
       return md.replace(/^\s+|\s+$/g, '')
     },
-    EXTERNAL_PLUGINS(content, options) {
+    EXTERNAL_PLUGINS({ content, options }) {
       const externalPackages = require('../external-plugins.json')
 
       const sorted = externalPackages
@@ -149,7 +149,7 @@ const config = {
         .join('\n')
       return sorted
     },
-    EVENT_DOCS(content, options) {
+    EVENT_DOCS({ content, options }) {
       const fileContents = fs.readFileSync(path.join(__dirname, '..', 'packages/analytics-core/src/events.js'), 'utf-8')
       const docBlocs = dox.parseComments(fileContents, { raw: true, skipSingleStar: true })
 
@@ -170,10 +170,10 @@ const config = {
       })
       return md.replace(/^\s+|\s+$/g, '')
     },
-    PLUGIN_DOCS: async (content, options, instance) => {
+    PLUGIN_DOCS: async ({ content, options, srcPath }) => {
       let pluginDocs = ''
       let pluginData
-      const { originalPath } = instance
+      const originalPath = path.resolve(srcPath)
       if (cache[originalPath]) {
         pluginData = cache[originalPath]
       } else {
@@ -195,7 +195,7 @@ const config = {
       }
       return `${pluginDocs}`
     },
-    API_DOCS(content, options) {
+    API_DOCS({ content, options }) {
       const fileContents = fs.readFileSync(path.join(__dirname, '..', 'packages/analytics-core/src/index.js'), 'utf-8')
       const unsortedDocBlocs = dox.parseComments(fileContents, { raw: true, skipSingleStar: true })
 
@@ -873,6 +873,9 @@ const markdownFiles = [
   `!${path.join(rootDir, 'packages/**/node_modules/**/**')}`,
   `!${path.join(rootDir, 'node_modules/**/**')}`,
 ]
-markdownMagic(markdownFiles, config, () => {
-  console.log('docs done')
-})
+markdownMagic(markdownFiles, config)
+  .then(() => console.log('docs done'))
+  .catch((err) => {
+    console.error('docs error', err)
+    process.exit(1)
+  })

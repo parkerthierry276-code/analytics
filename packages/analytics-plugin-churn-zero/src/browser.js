@@ -11,9 +11,8 @@
  * @return {AnalyticsPlugin}
  * @example
  *
- * This will load ChurnZero on to the page
  * churnZeroPlugin({
- *   appKey: '1234578'
+ *   appKey: '1234578',
  *   subdomain: 'mycompanydomain'
  * })
  */

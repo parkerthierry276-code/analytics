@@ -4,7 +4,7 @@ pageTitle: Form Utils
 description: Utility library for managing HTML form values
 ---
 
-A tiny form utility library for dealing with HTML form data in <!-- AUTO-GENERATED-CONTENT:START (pkgSize) -->`2.41kb`<!-- AUTO-GENERATED-CONTENT:END -->.
+A tiny form utility library for dealing with HTML form data in <!-- docs (pkgSize) -->`2.4kb`<!-- /docs -->.
 
 Exposes `onSubmit`, `onChange`, `listen`, `submitForm`, `getFormData`, & `getInputData` functions.
 
@@ -24,7 +24,7 @@ npm install @analytics/form-utils
 
 Below is the api for `@analytics/form-utils`. You can import only what you need & the rest will be tree-shaken out of your bundle.
 
-## `onSubmit`
+### `onSubmit`
 
 Listen to form submissions & do stuff with inputs.
 
@@ -81,7 +81,7 @@ onSubmit('all', (event, data, meta) => {
 })
 ```
 
-## `onChange`
+### `onChange`
 
 Listen to form changes & do stuff with inputs.
 
@@ -136,7 +136,7 @@ onChange('all', (event, data) => {
 })
 ```
 
-## `listen`
+### `listen`
 
 Listen will attach `onChange` & `onSubmit` listeners to forms
 
@@ -199,16 +199,25 @@ listen({
 })
 ```
 
-## `submitForm`
+### `submitForm`
 
-Submit form via JS
+Submit a form via JS. Useful for triggering a normal form submission after intercepting it with `onSubmit`.
 
 ```js
-import { listen } from '@analytics/form-utils'
+import { submitForm } from '@analytics/form-utils'
 
+const form = document.querySelector('form[id=one]')
+
+// Submit the form immediately
+submitForm(form)
+
+// Submit the form after a delay (in milliseconds)
+submitForm(form, {
+  timeout: 1000
+})
 ```
 
-## `getFormData`
+### `getFormData`
 
 Get values from form inputs
 
@@ -220,7 +229,7 @@ const data = getFormData(form)
 console.log('data', JSON.stringify(data, null, 2))
 ```
 
-## `getInputData`
+### `getInputData`
 
 Get value from single form input
 
@@ -233,7 +242,7 @@ const inputData = getInputData(form, inputName)
 console.log('inputData', JSON.stringify(inputData, null, 2))
 ```
 
-## `filterData`
+### `filterData`
 
 Filter out & omit sensitive fields
 

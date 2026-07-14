@@ -10,23 +10,24 @@ This analytics plugin will load ChurnZero's client side tracking script into you
 
 [View the docs](https://getanalytics.io/plugins/churn-zero/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Server-side usage](#server-side-usage)
-  - [Server-side API](#server-side-api)
-  - [Configuration options for server-side](#configuration-options-for-server-side)
-- [Additional examples](#additional-examples)
+- [ChurnZero plugin for `analytics`](#churnzero-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Server-side usage](#server-side-usage)
+    - [Server-side API](#server-side-api)
+    - [Configuration options for server-side](#configuration-options-for-server-side)
+  - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END (TOC) -->
+<!-- /docs -->
 
 ## Installation
 
@@ -37,7 +38,7 @@ npm install analytics
 npm install @analytics/churn-zero
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -52,15 +53,12 @@ import churnZeroPlugin from '@analytics/churn-zero'
 const analytics = Analytics({
   app: 'awesome-app',
   plugins: [
-    // This will load crazy egg on to the page
     churnZeroPlugin({
-      accountId: '1234578'
+      appKey: '1234578',
+      subdomain: 'mycompanydomain'
     })
   ]
 })
-
-/* Track a page view */
-analytics.page()
 
 /* Track a custom event */
 analytics.track('cartCheckout', {
@@ -76,7 +74,7 @@ analytics.identify('user-id-xyz', {
 
 ```
 
-After initializing `analytics` with the `churnZeroPlugin` plugin, data will be sent into ChurnZero whenever [analytics.page](https://getanalytics.io/api/#analyticspage), [analytics.track](https://getanalytics.io/api/#analyticstrack), or [analytics.identify](https://getanalytics.io/api/#analyticsidentify) are called.
+After initializing `analytics` with the `churnZeroPlugin` plugin, data will be sent into ChurnZero whenever [analytics.track](https://getanalytics.io/api/#analyticstrack), or [analytics.identify](https://getanalytics.io/api/#analyticsidentify) are called.
 
 See [additional implementation examples](#additional-examples) for more details on using in your project.
 
@@ -89,7 +87,6 @@ The `@analytics/churn-zero` package works in [the browser](#browser-usage) and [
 The ChurnZero client side browser plugin works with these analytic api methods:
 
 - **[analytics.identify](https://getanalytics.io/api/#analyticsidentify)** - Identify visitors and send details to ChurnZero
-- **[analytics.page](https://getanalytics.io/api/#analyticspage)** - Sends page views into ChurnZero
 - **[analytics.track](https://getanalytics.io/api/#analyticstrack)** - Track custom events and send to ChurnZero
 
 ### Browser API
@@ -101,9 +98,9 @@ import churnZeroPlugin from '@analytics/churn-zero'
 const analytics = Analytics({
   app: 'awesome-app',
   plugins: [
-    // This will load crazy egg on to the page
     churnZeroPlugin({
-      accountId: '1234578'
+      appKey: '1234578',
+      subdomain: 'mycompanydomain'
     })
   ]
 })
@@ -114,15 +111,14 @@ const analytics = Analytics({
 
 | Option | description |
 |:---------------------------|:-----------|
-| `accountId` <br/>**required** - string| ChurnZero account ID |
-| `scriptInclude` <br/>_optional_ - boolean| Load ChurnZero script into page |
-| `options` <br/>_optional_ - object| ChurnZero script options |
+| `appKey` <br/>**required** - string| ChurnZero AppKey |
+| `subdomain` <br/>**required** - string| ChurnZero AppKey |
+| `whitelistedEvents` <br/>**required** - string| An optional list of events to track |
 
 ## Server-side usage
 
 The ChurnZero server-side node.js plugin works with these analytic api methods:
 
-- **[analytics.page](https://getanalytics.io/api/#analyticspage)** - Sends page views into ChurnZero
 - **[analytics.track](https://getanalytics.io/api/#analyticstrack)** - Track custom events and send to ChurnZero
 - **[analytics.identify](https://getanalytics.io/api/#analyticsidentify)** - Identify visitors and send details to ChurnZero
 
@@ -136,7 +132,8 @@ const analytics = Analytics({
   app: 'awesome-app',
   plugins: [
     churnZeroPlugin({
-      apiKey: 'abc123'
+      appKey: '1234578',
+      subdomain: 'mycompanydomain'
     })
   ]
 })
@@ -147,7 +144,9 @@ const analytics = Analytics({
 
 | Option | description |
 |:---------------------------|:-----------|
-| `apiKey` <br/>**required** - string| ChurnZero API key |
+| `appKey` <br/>**required** - string| ChurnZero API key |
+| `subdomain` <br/>**required** - string| ChurnZero AppKey |
+| `whitelistedEvents` <br/>**required** - string| An optional list of events to track |
 
 
 ## Additional examples
@@ -165,14 +164,12 @@ Below are additional implementation examples.
     app: 'awesome-app',
     plugins: [
       churnZeroPlugin({
-        apiKey: 'abc123'
+        appKey: '1234578',
+        subdomain: 'mycompanydomain'
       })
       // ...other plugins
     ]
   })
-
-  /* Track a page view */
-  analytics.page()
 
   /* Track a custom event */
   analytics.track('cartCheckout', {
@@ -203,13 +200,11 @@ Below are additional implementation examples.
     app: 'my-app-name',
     plugins: [
       churnZeroPlugin({
-        apiKey: 'abc123'
+        appKey: '1234578',
+        subdomain: 'mycompanydomain'
       })
     ]
   })
-
-  /* Track a page view */
-  analytics.page()
 
   /* Track a custom event */
   analytics.track('cartCheckout', {
@@ -244,15 +239,12 @@ Below are additional implementation examples.
         var Analytics = _analytics.init({
           app: 'my-app-name',
           plugins: [
-            // This will load crazy egg on to the page
-            analyticsChurnZero({
-              accountId: '1234578'
+            analyticsChurnzero({
+              appKey: '1234578',
+              subdomain: 'mycompanydomain'
             })
           ]
         })
-
-        /* Track a page view */
-        analytics.page()
 
         /* Track a custom event */
         analytics.track('cartCheckout', {
@@ -293,22 +285,19 @@ Below are additional implementation examples.
       </script>
       <script type="module">
         import analytics from 'https://unpkg.com/analytics/lib/analytics.browser.es.js?module'
-        import analyticsChurnZero from 'https://unpkg.com/@analytics/churn-zero/lib/analytics-plugin-churn-zero.browser.es.js?module'
+        import analyticsChurnzero from 'https://unpkg.com/@analytics/churn-zero/lib/analytics-plugin-churn-zero.browser.es.js?module'
         /* Initialize analytics */
         const Analytics = analytics({
           app: 'analytics-html-demo',
           debug: true,
           plugins: [
-            // This will load crazy egg on to the page
-            analyticsChurnZero({
-              accountId: '1234578'
+            analyticsChurnzero({
+              appKey: '1234578',
+              subdomain: 'mycompanydomain'
             })
             // ... add any other third party analytics plugins
           ]
         })
-
-        /* Track a page view */
-        analytics.page()
 
         /* Track a custom event */
         analytics.track('cartCheckout', {
@@ -333,4 +322,4 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->

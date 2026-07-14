@@ -1,7 +1,7 @@
 const path = require('path')
 const safeChalk = require('safe-chalk')
 const gzipSize = require('gzip-size')
-const brotliSize = require('brotli-size')
+const brotliSize = require('brotli-size').default
 const prettyBytes = require('pretty-bytes')
 
 const chalk = safeChalk()

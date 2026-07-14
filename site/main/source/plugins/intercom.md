@@ -5,7 +5,7 @@ description: Using the intercom plugin
 
 Integration with [intercom](https://intercom.com/) for [analytics](https://www.npmjs.com/package/analytics)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -25,7 +25,7 @@ Integration with [intercom](https://intercom.com/) for [analytics](https://www.n
   - [Browser Example](#browser-example)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -34,7 +34,7 @@ npm install analytics
 npm install @analytics/intercom
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -328,7 +328,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Custom browser methods
 

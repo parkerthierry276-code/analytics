@@ -12,19 +12,20 @@ Perfume is a tiny, web performance monitoring library that reports field data ba
 
 Using perfume.js with `analytics` makes wiring up your performances metrics to any third-party analytics tool nice & easy.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Configuration options](#configuration-options)
-- [Additional examples](#additional-examples)
-- [Zero config](#zero-config)
-- [Demo Video](#demo-video)
+- [Perfume.js plugin for `analytics`](#perfumejs-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Configuration options](#configuration-options)
+  - [Additional examples](#additional-examples)
+  - [Zero config](#zero-config)
+  - [Demo Video](#demo-video)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 

@@ -17,7 +17,7 @@ The core `analytics` API is exposed once the library is initialized with [config
 4. [Add an analytics provider](http://getanalytics.io/tutorials/getting-started/#3-connect-plugins)
 5. [Write custom plugins](http://getanalytics.io/plugins/writing-plugins)
 
-<!-- AUTO-GENERATED-CONTENT:START (API_DOCS) -->
+<!-- docs (API_DOCS) -->
 ## `Configuration`
 
 Analytics library configuration
@@ -437,4 +437,4 @@ analytics.plugins.disable(['google', 'segment']).then(() => {
   console.log('do stuff')
 })
 ```
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->

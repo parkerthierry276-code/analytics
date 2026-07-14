@@ -11,9 +11,10 @@ import {
   getSearchValue,
   getHash,
   getHashValue,
-  isLocalHost, 
+  isLocalHost,
   isUrlLike,
-  trimTld 
+  trimTld,
+  paramsClean
 } from '../src/index.js'
 
 // test.before.each(ENV.reset);
@@ -176,6 +177,17 @@ test('getHash', async () => {
 test('getHashValue', async () => {
   const url = 'http://glocal.dev/#utm_source=the_source&utm_medium=camp%20med&utm_term=Bought%20keyword&utm_content=Funny%20Text&utm_campaign=400kpromo'
   assert.equal(getHashValue('utm_medium', url), "camp med")
+})
+
+test('paramsClean', async () => {
+  // Strips the matching param, returns cleaned search string
+  assert.equal(paramsClean('?', '?foo=bar&baz=true', 'foo'), '?baz=true')
+  // Strips a trailing param
+  assert.equal(paramsClean('?', '?foo=bar&baz=true', 'baz'), '?foo=bar')
+  // Returns search unchanged when param not present
+  assert.equal(paramsClean('?', '?baz=true', 'foo'), '?baz=true')
+  // Supports regex param matching
+  assert.equal(paramsClean('?', '?utm_source=x&utm_medium=y&keep=1', /utm_\w+/), '?keep=1')
 })
 
 test('isLocalhost', async () => {

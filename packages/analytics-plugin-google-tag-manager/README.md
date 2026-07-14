@@ -10,24 +10,25 @@ This analytics plugin will load google tag manager into your application.
 
 For more information [see the docs](https://getanalytics.io/plugins/google-tag-manager/).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Additional examples](#additional-examples)
-- [Configuring GTM](#configuring-gtm)
-- [Using multiple instances of GTM](#using-multiple-instances-of-gtm)
-- [Custom name for dataLayer-object](#custom-name-for-datalayer-object)
-- [Tracking if JS is disabled](#tracking-if-js-is-disabled)
+- [Google Tag Manager plugin for analytics](#google-tag-manager-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Additional examples](#additional-examples)
+  - [Configuring GTM](#configuring-gtm)
+  - [Using multiple instances of GTM](#using-multiple-instances-of-gtm)
+  - [Custom name for dataLayer-object](#custom-name-for-datalayer-object)
+  - [Tracking if JS is disabled](#tracking-if-js-is-disabled)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END (TOC) -->
+<!-- /docs -->
 
 ## Installation
 
@@ -38,7 +39,7 @@ npm install analytics
 npm install @analytics/google-tag-manager
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -104,15 +105,15 @@ const analytics = Analytics({
 
 ### Configuration options for browser
 
-| Option                                     | description                                                    |
-|:-------------------------------------------|:---------------------------------------------------------------|
-| `containerId` <br/>**required** - string   | The Container ID uniquely identifies the GTM Container.        |
-| `dataLayerName` <br/>_optional_ - string   | The optional name for dataLayer-object. Defaults to dataLayer. |
-| `customScriptSrc` <br/>_optional_ - string | Load Google Tag Manager script from a custom source            |
-| `preview` <br/>_optional_ - string         | The preview-mode environment                                   |
-| `auth` <br/>_optional_ - string            | The preview-mode authentication credentials                    |
-| `execution` <br/>_optional_ - string       | The script execution mode                                      |
-| `nonce` <br/>_optional_ - string           | Content-Security-Policy nonce value                            |
+| Option | description |
+|:---------------------------|:-----------|
+| `containerId` <br/>**required** - string| The Container ID uniquely identifies the GTM Container. |
+| `dataLayerName` <br/>_optional_ - string| The optional name for dataLayer-object. Defaults to dataLayer. |
+| `customScriptSrc` <br/>_optional_ - string| Load Google Tag Manager script from a custom source |
+| `preview` <br/>_optional_ - string| The preview-mode environment |
+| `auth` <br/>_optional_ - string| The preview-mode authentication credentials |
+| `execution` <br/>_optional_ - string| The script execution mode |
+| `nonce` <br/>_optional_ - string| Content-Security-Policy nonce value |
 
 
 ## Additional examples
@@ -211,7 +212,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Configuring GTM
 

@@ -4,10 +4,10 @@
 
 This [analytics](https://www.npmjs.com/package/analytics) plugin will disable `page`, `track`, & `identify` calls for visitors using [Do Not Track](https://caniuse.com/#feat=do-not-track).
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC) -->
+<!-- docs (TOC) -->
 - [Usage](#usage)
 - [Standalone usage](#standalone-usage)
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Usage
 

@@ -14,7 +14,7 @@ This analytics plugin will load google analytics into your application.
 
 For the newer version of google analytics please see the [`@analytics/google-analytics` package](https://www.npmjs.com/package/@analytics/google-analytics) or the [GA4 plugin docs](https://getanalytics.io/plugins/google-analytics/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -40,7 +40,7 @@ For the newer version of google analytics please see the [`@analytics/google-ana
 - [Cookie Config](#cookie-config)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -49,7 +49,7 @@ npm install analytics
 npm install @analytics/google-analytics-v3
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -135,6 +135,7 @@ const analytics = Analytics({
 | `customScriptSrc` <br/>_optional_ - string| Custom URL for google analytics script, if proxying calls |
 | `cookieConfig` <br/>_optional_ - object| Additional cookie properties for configuring the [ga cookie](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#configuring_cookie_field_settings) |
 | `tasks` <br/>_optional_ - object| [Set custom google analytic tasks](https://developers.google.com/analytics/devguides/collection/analyticsjs/tasks) |
+| `nonce` <br/>_optional_ - string| Content-Security-Policy nonce value |
 
 ## Server-side usage
 
@@ -349,7 +350,7 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Anonymize Visitor IPs
 

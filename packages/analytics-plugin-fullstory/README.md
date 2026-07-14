@@ -16,21 +16,22 @@ For more information on FullStory's official browser package, you can check out 
 
 [View the docs](https://getanalytics.io/plugins/fullstory/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Additional examples](#additional-examples)
-- [Formatting payloads](#formatting-payloads)
+- [FullStory plugin for `analytics`](#fullstory-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Additional examples](#additional-examples)
+  - [Formatting payloads](#formatting-payloads)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -45,7 +46,7 @@ You will need your `org` ID from [FullStory setting](https://help.fullstory.com/
 
 To find your FullStory account's `org` ID go to **Settings > FullStory Setup.** and grab the `_fs_org` value.
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -140,7 +141,7 @@ Below are additional implementation examples.
         var Analytics = _analytics.init({
           app: 'my-app-name',
           plugins: [
-            analyticsFullStory({
+            analyticsFullStory.default({
               org: 'your-org-name'
             })
           ]
@@ -221,7 +222,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->
 
 ## Formatting payloads
 

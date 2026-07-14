@@ -7,7 +7,7 @@ Integration with Mixpanel for [analytics](https://www.npmjs.com/package/analytic
 
 This analytics plugin will load Mixpanel's client side tracking script into your application and send custom events, page views, and identify visitors inside Mixpanel.
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
@@ -20,7 +20,7 @@ This analytics plugin will load Mixpanel's client side tracking script into your
 - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END (TOC) -->
+<!-- /docs -->
 
 ## Installation
 
@@ -31,7 +31,7 @@ npm install analytics
 npm install @analytics/mixpanel
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -219,4 +219,4 @@ Below are additional implementation examples.
 
 </details>
 
-<!-- AUTO-GENERATED-CONTENT:END (PLUGIN_DOCS) -->
+<!-- /docs -->

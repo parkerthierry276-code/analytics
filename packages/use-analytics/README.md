@@ -8,21 +8,22 @@ React hooks for [analytics](https://www.npmjs.com/package/analytics). This libra
 
 Note: When using `analytics` with React, this library, `use-analytics`, hooks library is **not** required. See details below for [using analytics with react without hooks.](https://getanalytics.io/utils/react-hooks/#without-hooks)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Demo video](#demo-video)
-- [`useAnalytics` hook](#useanalytics-hook)
-- [`AnalyticsConsumer`](#analyticsconsumer)
-- [`withAnalytics`](#withanalytics)
-- [`AnalyticsContext`](#analyticscontext)
-- [Analytics without hooks](#analytics-without-hooks)
+- [useAnalytics React Hooks](#useanalytics-react-hooks)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Demo video](#demo-video)
+  - [`useAnalytics` hook](#useanalytics-hook)
+  - [`AnalyticsConsumer`](#analyticsconsumer)
+  - [`withAnalytics`](#withanalytics)
+  - [`AnalyticsContext`](#analyticscontext)
+  - [Analytics without hooks](#analytics-without-hooks)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 

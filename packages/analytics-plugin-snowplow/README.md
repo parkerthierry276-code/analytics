@@ -8,23 +8,24 @@ Integration with [Snowplow Analytics](https://www.snowplowanalytics.com/) for [a
 
 [View the docs](https://getanalytics.io/plugins/snowplow/)
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText=Click to expand) -->
+<!-- docs (TOC) collapse=true collapseText='Click to expand' -->
 <details>
 <summary>Click to expand</summary>
 
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Platforms Supported](#platforms-supported)
-- [Browser usage](#browser-usage)
-  - [Browser API](#browser-api)
-  - [Configuration options for browser](#configuration-options-for-browser)
-- [Server-side usage](#server-side-usage)
-  - [Server-side API](#server-side-api)
-  - [Configuration options for server-side](#configuration-options-for-server-side)
-- [Additional examples](#additional-examples)
+- [Snowplow plugin for analytics](#snowplow-plugin-for-analytics)
+  - [Installation](#installation)
+  - [How to use](#how-to-use)
+  - [Platforms Supported](#platforms-supported)
+  - [Browser usage](#browser-usage)
+    - [Browser API](#browser-api)
+    - [Configuration options for browser](#configuration-options-for-browser)
+  - [Server-side usage](#server-side-usage)
+    - [Server-side API](#server-side-api)
+    - [Configuration options for server-side](#configuration-options-for-server-side)
+  - [Additional examples](#additional-examples)
 
 </details>
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 ## Installation
 
@@ -35,7 +36,7 @@ npm install analytics
 npm install @analytics/snowplow
 ```
 
-<!-- AUTO-GENERATED-CONTENT:START (PLUGIN_DOCS) -->
+<!-- docs (PLUGIN_DOCS) -->
 
 ## How to use
 
@@ -731,7 +732,7 @@ Below are additional implementation examples.
 </details>
 
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- /docs -->
 
 
 See the [full list of analytics provider plugins](https://github.com/DavidWells/analytics#current-plugins) in the main repo.

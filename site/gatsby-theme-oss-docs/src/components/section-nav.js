@@ -16,7 +16,8 @@ const StyledList = styled.ul({
 
 const StyledListItem = styled.li(props => ({
   listStyle: 'none',
-  fontSize: '1rem',
+  fontSize: props.depth === 3 ? '0.9rem' : '1rem',
+  paddingLeft: props.depth === 3 ? '0.75rem' : 0,
   color: props.active && colors.primary,
   a: {
     color: 'inherit',
@@ -42,7 +43,7 @@ export default function SectionNav(props) {
 
   const {contentRef, imagesLoaded} = props
   useEffect(() => {
-    const headings = contentRef.current.querySelectorAll('h1, h2')
+    const headings = contentRef.current.querySelectorAll('h1, h2, h3')
     setOffsets(
       Array.from(headings)
         .map(heading => {
@@ -74,11 +75,11 @@ export default function SectionNav(props) {
   const slugger = new Slugger()
   return (
     <StyledList>
-      {props.headings.map(({value}) => {
+      {props.headings.map(({value, depth}) => {
         const text = striptags(value)
         const slug = slugger.slug(text)
         return (
-          <StyledListItem key={slug} active={slug === activeHeading}>
+          <StyledListItem key={slug} depth={depth} active={slug === activeHeading}>
             <a href={`#${slug}`} onClick={handleHeadingClick}>
               {text}
             </a>
