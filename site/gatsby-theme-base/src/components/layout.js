@@ -27,7 +27,8 @@ export default function Layout(props) {
             </Helmet>
             {props.children}
             <div className='ad-container' id="ads" dangerouslySetInnerHTML={{
-              __html: `<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CWYIE2JU&placement=getanalyticsio&format=cover" id="_carbonads_js"></script>`
+              // Use explicit https to avoid protocol-relative loading (prevents http downgrade)
+              __html: `<script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CWYIE2JU&placement=getanalyticsio&format=cover" id="_carbonads_js"></script>`
             }} />
           </Fragment>
         )

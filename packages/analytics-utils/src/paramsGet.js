@@ -7,5 +7,14 @@ import {decodeUri} from './decodeUri.js'
  * @return {string} match
  */
 export function paramsGet(param, url) {
-  return decodeUri((RegExp(`${param}=(.+?)(&|$)`).exec(url) || [, ''])[1])
+  try {
+    // Use URLSearchParams to safely parse query strings and avoid constructing RegExp from user input
+    const search = url ? (new URL(url, 'http://example.com')).search : (typeof window !== 'undefined' ? window.location.search : '')
+    const params = new URLSearchParams(search)
+    const value = params.get(param)
+    return decodeUri(value == null ? '' : value)
+  } catch (e) {
+    // Fallback to empty string on malformed input
+    return ''
+  }
 }
