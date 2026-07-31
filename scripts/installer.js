@@ -3,7 +3,8 @@ const fs = require('fs')
 const cp = require("child_process")
 
 function installDeps(functionDir, cb) {
-  cp.exec("npm i", { cwd: functionDir }, cb)
+  // Use execFile to avoid the shell and reduce risk of command injection
+  cp.execFile("npm", ["i"], { cwd: functionDir }, cb)
 }
 
 (async () => {
